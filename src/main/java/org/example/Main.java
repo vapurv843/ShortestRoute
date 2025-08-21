@@ -33,7 +33,7 @@ public class Main {
                 }
             }
 
-            System.out.println("Optimal route (brute-force):");
+            System.out.println("Optimal route :");
             for (Order o : bestRoute) {
                 System.out.println("Pickup " + o.restaurantName + " → Deliver " + o.consumerName);
             }
@@ -43,7 +43,7 @@ public class Main {
             List<Order> route = greedyRoute(orders, aman);
             double totalTime = aman.calculateRouteTime(route);
 
-            System.out.println("Approximate route (greedy heuristic):");
+            System.out.println("Approximate route for large dataset:");
             for (Order o : route) {
                 System.out.println("Pickup " + o.restaurantName + " → Deliver " + o.consumerName);
             }
